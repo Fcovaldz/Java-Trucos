@@ -10,10 +10,10 @@ public class Usuario {
 
     private String nombre;
     private String email;
-    private String contraseña;
+    private Contraseña contraseña;
     private List<Elemento> listaDeDeseos;
 
-    public Usuario(String nombre, String email, String contraseña) {
+    public Usuario(String nombre, String email, Contraseña contraseña) {
         this.nombre = nombre;
         this.email = email;
         this.contraseña = contraseña;
@@ -22,18 +22,6 @@ public class Usuario {
 
     public void añadirElementoAListaDeDeseos(Elemento elemento) {
         listaDeDeseos.add(elemento);
-    }
-
-    public void cambiarContraseña(String nuevaContraseña) {
-        this.contraseña = nuevaContraseña;
-    }
-
-    public boolean esContraseñaValida(String contraseña) {
-        return false;
-    }
-
-    public String generarContraseñaAleatoria() {
-        return "";
     }
 
     public void cambiarEmail(String nuevoEmail) {
